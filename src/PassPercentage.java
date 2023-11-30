@@ -1,17 +1,18 @@
 package src;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class PassPercentage {
     public static void main(String[] args) {
         int finalScores = 0;
-        int students = 100;
+        int students = 20;
         int passPercentage;
         int subjectCount = 7;
 
-        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
-        System.out.println("Enter scores for " + subjectCount + " subjects for each student:");
+        System.out.println("Generating random scores for " + subjectCount + " subjects for each student:");
 
         for (int student = 1; student <= students; student++) {
             System.out.println("Student " + student + ": ");
@@ -19,7 +20,8 @@ public class PassPercentage {
 
             for (int subject = 1; subject <= subjectCount; subject++) {
                 System.out.println("Enter score for subject " + subject + ": ");
-                int score = scanner.nextInt();
+                int score = random.nextInt(101);
+                System.out.println("Score for subject " + subject + ": " + score);
                 studentScores += score; // Accumulate scores for each subject
             }
 
