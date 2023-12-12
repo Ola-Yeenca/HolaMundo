@@ -1,3 +1,5 @@
+package Matrices.src;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -34,10 +36,12 @@ public class LaPrimitiva {
         
         Random random = new Random();
 
+        System.out.print("Your automatic bets are: ");
         for (int i = 0; i < bet.length; i++) {
             bet[i] = random.nextInt(49) + 1;
+            System.out.print(bet[i] + " ");
         }
-
+        System.out.println();
         return bet;
     }
 
@@ -85,12 +89,9 @@ public class LaPrimitiva {
     private static int matchDraw(int[] draw, int[] drawing) {
         int correctDraw = 0;
 
-        for (int i : draw) {
-            for (int j : drawing) {
-                if (i == j) {
-                    correctDraw++;
-                    break;
-                }
+        for (int i = 0; i < draw.length && i < drawing.length; i++) {
+            if (draw[i] == drawing[i]) {
+                correctDraw++;
             }
         }
         return correctDraw;
@@ -122,7 +123,7 @@ public class LaPrimitiva {
                 break;
 
             case 1:
-                System.out.println("Sorry, only you got only 1 correctly.");
+                System.out.println("Sorry, you got only 1 correctly.");
                 break;
 
             default:

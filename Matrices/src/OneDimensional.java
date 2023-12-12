@@ -1,3 +1,5 @@
+package Matrices.src;
+
 import java.util.Scanner;
 
 public class OneDimensional {
