@@ -1,0 +1,16 @@
+
+7
+java:S1220""Move this file to a named package.8¤ö‚Ñº1
+L	java:S106"+Replace this use of System.out by a logger.(ÜÙ½ûÿÿÿÿ8¶ö‚Ñº1
+W
+java:S2209"5Change this instance-reference to a static reference.(ëáµ÷ÿÿÿÿÿ8ÛÃĞûº1
+G	java:S106"+Replace this use of System.out by a logger.(üœçÂ8¸ö‚Ñº1
+G	java:S106"+Replace this use of System.out by a logger.(ƒ«ş²8Àö‚Ñº1
+L	java:S106"+Replace this use of System.out by a logger.(Â€„¼úÿÿÿÿ8Âö‚Ñº1
+R
+java:S2209"5Change this instance-reference to a static reference.(ïŸØ¢8ìÃĞûº1
+L	java:S106 "+Replace this use of System.out by a logger.(òšó¬øÿÿÿÿ8Äö‚Ñº1
+R
+java:S2209#"5Change this instance-reference to a static reference.(€›—‘8ïÃĞûº1
+W
+java:S2209&"5Change this instance-reference to a static reference.(½œÜ’ÿÿÿÿÿ8ğÃĞûº1

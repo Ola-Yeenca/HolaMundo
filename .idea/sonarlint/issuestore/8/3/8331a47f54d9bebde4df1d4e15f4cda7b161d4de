@@ -1,0 +1,12 @@
+
+L	java:S106"+Replace this use of System.out by a logger.(µž“–ûÿÿÿÿ8“ý‚Ñº1
+L	java:S106"+Replace this use of System.out by a logger.(‚®‚Ýøÿÿÿÿ8šý‚Ñº1
+o
+java:S3776 "RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(É“ûë8Ÿý‚Ñº1
+G	java:S106""+Replace this use of System.out by a logger.(ý‘ ƒ8 ý‚Ñº1
+G	java:S106&"+Replace this use of System.out by a logger.(×•œ²8¢ý‚Ñº1
+L	java:S106)"+Replace this use of System.out by a logger.(‹µ‹¶ýÿÿÿÿ8£ý‚Ñº1
+G	java:S106+"+Replace this use of System.out by a logger.(¨Ô…‹8¤ý‚Ñº1
+G	java:S106/"+Replace this use of System.out by a logger.(×•œ²8¦ý‚Ñº1
+L	java:S1062"+Replace this use of System.out by a logger.(‹µ‹¶ýÿÿÿÿ8¨ý‚Ñº1
+G	java:S1064"+Replace this use of System.out by a logger.(èË¿ƒ8¨ý‚Ñº1
