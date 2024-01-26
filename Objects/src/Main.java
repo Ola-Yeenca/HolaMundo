@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         /*
@@ -10,7 +12,7 @@ public class Main {
         trafficLights.changeColors();
         trafficLights.changeColors();
 
-         */
+
 
         Punto punto1 = new Punto();
         Punto punto2 = new Punto(5, 3);
@@ -25,5 +27,37 @@ public class Main {
 
         System.out.println("Distance from Point 4 to the origin: " + punto4.distanceToOrigin());
 
+
+         */
+        PhoneBook phoneBook = new PhoneBook();
+
+        System.out.println("*****************************************************************************");
+        System.out.println("Contact List");
+        System.out.println("*****************************************************************************");
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Add contact
+        System.out.println("Add contact:");
+        System.out.print("Enter name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter surname: ");
+        String surname = scanner.nextLine();
+
+        System.out.print("Enter phone number: ");
+        long phoneNumber = scanner.nextLong();
+        scanner.nextLine(); // Consume the newline character
+
+        phoneBook.addContact(name, surname, phoneNumber);
+
+        // Search contact
+        System.out.println("\nSearch contact:");
+        System.out.print("Enter search term: ");
+        phoneBook.viewContact(scanner.next());
+
+        // View all contacts
+        System.out.println("\nView all contacts:");
+        phoneBook.showContacts();
     }
 }

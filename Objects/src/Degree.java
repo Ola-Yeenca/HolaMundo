@@ -1,11 +1,11 @@
 public class Degree {
-    String subjectName;
-    String subjectCode;
-    String course;
+    private final String subjectName;
+    private final int subjectCode;
+    private final String course;
 
     Degree(String subjectName, String subjectCode, String course) {
         this.subjectName = subjectName;
-        this.subjectCode = subjectCode;
+        this.subjectCode = Integer.parseInt(subjectCode);
         this.course = course;
 
 
@@ -13,7 +13,7 @@ public class Degree {
     }
 
     public static void main(String[] args) {
-        Degree degree = new Degree("Mathematics", "Code 0012", "Course 1");
+        Degree degree = new Degree("Mathematics", "0012", "Course 1");
 
         System.out.println("Subject Name: " + degree.subjectName);
         System.out.println("Subject code: " + degree.subjectCode);

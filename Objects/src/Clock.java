@@ -15,10 +15,9 @@ public class Clock {
 
     public String getFormattedTime() {
         if (this.hours >= 0 && this.hours <= 11) {
-            return String.format("%02d:%02d:%02d AM", this.hours, this.minutes, this.seconds);
+            return String.format("%02f:%02f:%02f AM", this.hours, this.minutes, this.seconds);
         } else {
-            String format = String.format("%02d:%02d:%02d PM", this.hours - 12, this.minutes, this.seconds);
-            return format;
+            return String.format("%02f:%02f:%02f PM", this.hours - 12, this.minutes, this.seconds);
         }
     }
 
