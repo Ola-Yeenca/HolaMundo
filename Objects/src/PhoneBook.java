@@ -45,29 +45,52 @@ public class PhoneBook {
     }
 
     public void viewContact(String search) {
-        for (Contact contact : contacts) {
-            if (contact.getName().equalsIgnoreCase(search) ||
-                    contact.getSurname().equalsIgnoreCase(search) ||
-                    String.valueOf(contact.getDigits()).equalsIgnoreCase(search)) {
-                System.out.println(contact);
+        boolean found = false;
+        String searchLower = search.toLowerCase();
+
+        for (int i = 0; i < contacts.size(); i++) {
+            Contact contact = contacts.get(i);
+            if (contact.getName().toLowerCase().contains(searchLower) ||
+                    contact.getSurname().toLowerCase().contains(searchLower) ||
+                    String.valueOf(contact.getDigits()).contains(searchLower)) {
+                System.out.println("Contact " + (i + 1) + ": " + contact);
+                found = true;
             }
+        }
+
+        if (!found) {
+            System.out.println("Contact not found for search term: " + search);
         }
     }
 
+
+
+    public void deleteContact(String search) {
+        try {
+            int count = Integer.parseInt(search);
+            for (int i = 0; i < count && !contacts.isEmpty(); i++) {
+                contacts.remove(contacts.size() - 1);
+            }
+            System.out.println("Deleted " + search + " contacts successfully.");
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a valid number to delete contacts.");
+        }
+    }
+
+
     @Override
     public String toString() {
-        StringBuilder result = new StringBuilder("PhoneBook { contacts=[");
+        StringBuilder result = new StringBuilder("PhoneBook { contacts=[\n");
 
         for (Contact contact : contacts) {
-            result.append("Contact { name='").append(contact.name).append("', surname='").append(contact.surname)
-                    .append("', digits=").append(contact.digits).append(" }, ");
+            result.append(contact).append(",\n");
         }
 
         if (!contacts.isEmpty()) {
             result.delete(result.length() - 2, result.length());
         }
 
-        result.append("] }");
+        result.append("\n] }");
 
         return result.toString();
     }

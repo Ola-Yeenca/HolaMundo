@@ -56,6 +56,10 @@ public class Main {
         System.out.print("Enter search term: ");
         phoneBook.viewContact(scanner.next());
 
+        // Delete contact
+        System.out.println("\nEnter the contact you want to delete: ");
+        phoneBook.deleteContact(scanner.next());
+
         // View all contacts
         System.out.println("\nView all contacts:");
         phoneBook.showContacts();

@@ -46,4 +46,5 @@ public class Car {
         System.out.println("Color of the  car :" + car.color);
         System.out.println("Model of the car: " + car.model);
     }
+
 }
